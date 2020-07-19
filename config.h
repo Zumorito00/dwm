@@ -2,12 +2,12 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const int gappx              = 15;        /* gaps between windows */
+static const int gappx              = 30;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=9" };
+static const char *fonts[]          = { "monospace:size=11" };
 static const char dmenufont[]       = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -96,7 +96,7 @@ static Key keys[] = {
     { MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
     { MODKEY|ShiftMask,             XK_w,      setgaps,        {.i = 0  } },
     { MODKEY|ShiftMask,             XK_d,      setgaps,        {.i = 0  } },
-    { MODKEY|ShiftMask,             XK_d,      setgaps,        {.i = 15  } },
+    { MODKEY|ShiftMask,             XK_d,      setgaps,        {.i = gappx  } },
 	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
